@@ -34,7 +34,7 @@ class EventListener implements Listener {
 		    if($this->plugin->cfg["log-chat-disabled"]){
 		        $player->sendMessage(TextFormat::colorize(PerWorldChat::PREFIX . "&cChat is disabled on this world"));
 		    }
-		    $event->setCancelled(true);
+		    $event->cancel();
 		}
 		$recipients = $event->getRecipients();
 		foreach($recipients as $key => $recipient){
